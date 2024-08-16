@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fee Receipt</title>
+</head>
+<body>
+    <h1>Fee Receipt</h1>
+    <p>Dear {{ fee.student.full_name }},</p>
+    <p>Thank you for your recent payment. We appreciate your promptness in settling the fee. Below are the details of your transaction:</p>
+    <p><strong>Payment Summary:</strong></p>
+    <ul>
+        <li><strong>Amount Paid:</strong> {{ fee.total_amount }}</li>
+        <li><strong>Payment Date:</strong> {{ fee.date_submitted }}</li>
+        <li><strong>Valid Until:</strong> {{ fee.valid_until }}</li>
+        <li><strong>Enrolled Course:</strong> {{ fee.student.current_class.course_name }}</li>
+        <li><strong>Student Email:</strong> {{ fee.student.email }}</li>
+    </ul>
+    <p>If you have any questions or need further assistance, please do not hesitate to contact us. We are here to help you.</p>
+    <p>Thank you once again for your support and cooperation. We look forward to continuing to serve you.</p>
+    <p>Best regards,</p>
+    <p>Your School </p>
+</body>
+</html>
